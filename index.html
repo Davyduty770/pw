@@ -5,87 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davyduty_Mnyama - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="min-h-screen bg-gradient-to-b from-red-800 to-red-950">
-        <div class="container">
-            <!-- Header Section -->
-            <header class="flex-col md:flex-row items-center justify-between gap-8 mb-12">
-                <div class="flex items-center gap-6">
-                    <div class="relative h-32 w-32 rounded-full overflow-hidden border-4 border-yellow-500">
-                        <img src="https://sjc.microlink.io/w39Px14_fvWG-AqTo8R7gOO5FezKBtUUr-kl7ZcwBtn6xcfQgKrMzH4n1G-VxWwke8glU3tLTUtcwurHHa2u4g.jpeg" alt="Profile Photo" class="object-cover w-full h-full">
-                    </div>
-                    <div>
-                        <h1 class="text-4xl font-bold text-yellow-500">Davyduty_Mnyama</h1>
-                        <p class="text-xl text-red-300">Full-Stack Developer</p>
-                    </div>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="https://sjc.microlink.io/w39Px14_fvWG-AqTo8R7gOO5FezKBtUUr-kl7ZcwBtn6xcfQgKrMzH4n1G-VxWwke8glU3tLTUtcwurHHa2u4g.jpeg" alt="Profile Photo" class="profile-img">
+                <div>
+                    <h1>Davyduty_Mnyama</h1>
+                    <p>Full-Stack Developer</p>
                 </div>
-                <div class="flex gap-3">
-                    <button class="btn-icon"><i data-lucide="github"></i></button>
-                    <button class="btn-icon"><i data-lucide="twitter"></i></button>
-                    <button class="btn-icon"><i data-lucide="linkedin"></i></button>
-                    <button class="btn-icon"><i data-lucide="mail"></i></button>
-                </div>
-            </header>
+            </div>
+            <div class="social-buttons">
+                <button class="btn-icon">GH</button>
+                <button class="btn-icon">TW</button>
+                <button class="btn-icon">LI</button>
+                <button class="btn-icon">ML</button>
+            </div>
+        </header>
 
-            <!-- About Me Section -->
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold mb-6 text-yellow-500">About Me</h2>
-                <div class="card">
-                    <p class="text-lg leading-relaxed">
-                        I'm a dedicated developer who lives and breathes code. I thrive in intense coding sessions, turning
-                        caffeine into elegant solutions for complex problems. My workspace might be chaotic, but my code is clean,
-                        efficient, and meticulously crafted. I specialize in building robust applications that push the boundaries
-                        of what's possible.
-                    </p>
-                    <p class="text-lg leading-relaxed mt-4">
-                        When I'm not coding, you can find me exploring new hiking trails, experimenting with photography, or
-                        trying out new recipes in the kitchen. I believe in continuous learning and am always looking to expand my
-                        skills and knowledge.
-                    </p>
-                </div>
-            </section>
+        <section>
+            <h2>About Me</h2>
+            <div class="card">
+                <p>
+                    I'm a dedicated developer who lives and breathes code. I thrive in intense coding sessions, turning
+                    caffeine into elegant solutions for complex problems. My workspace might be chaotic, but my code is clean,
+                    efficient, and meticulously crafted. I specialize in building robust applications that push the boundaries
+                    of what's possible.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new hiking trails, experimenting with photography, or
+                    trying out new recipes in the kitchen. I believe in continuous learning and am always looking to expand my
+                    skills and knowledge.
+                </p>
+            </div>
+        </section>
 
-            <!-- Featured Video Section -->
-            <section class="mb-16">
-                <h2 class="text-3xl font-bold mb-6 text-yellow-500">Featured Video</h2>
-                <div class="card">
-                    <div class="aspect-video w-full overflow-hidden rounded-lg border-2 border-yellow-500 relative group">
-                        <iframe
-                            class="w-full h-full"
-                            src="https://www.youtube.com/embed/rl5hqHSSfIc?autoplay=1&enablejsapi=1&volume=100"
-                            title="SONGA NAYO - iMILLY (OFFICIAL VIDEO)"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                        <div class="overlay">
-                            <div class="text-white text-center p-4">
-                                <i data-lucide="volume-2" class="h-12 w-12 mx-auto mb-2 text-yellow-500 animate-pulse"></i>
-                                <p class="font-bold">Click to enable sound</p>
-                                <p class="text-sm">Browser security may require your interaction</p>
-                            </div>
+        <section>
+            <h2>Featured Video</h2>
+            <div class="card">
+                <div class="video-container" id="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/rl5hqHSSfIc?autoplay=1&enablejsapi=1&volume=100"
+                        title="SONGA NAYO - iMILLY (OFFICIAL VIDEO)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                    <div class="video-overlay">
+                        <div>
+                            <p>Click to enable sound</p>
+                            <p>Browser security may require your interaction</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between mt-4">
-                        <p class="text-red-300">Featured: SONGA NAYO - iMILLY (OFFICIAL VIDEO)</p>
-                        <button class="btn-unmute">
-                            <i data-lucide="volume-2" class="h-4 w-4 mr-2"></i> Unmute
-                        </button>
-                    </div>
+                    <button class="btn-fullscreen" id="fullscreen-btn">⛶</button>
                 </div>
-            </section>
+                <p>Featured: SONGA NAYO - iMILLY (OFFICIAL VIDEO)</p>
+                <button class="btn-unmute" id="unmute-btn">Unmute</button>
+            </div>
+        </section>
 
-            <!-- Footer -->
-            <footer class="text-center text-red-400 mt-20 pb-8 border-t-2 border-yellow-500/30 pt-6">
-                <p>
-                    © <span id="current-year"></span> <span class="text-yellow-500 font-semibold">Davyduty_Mnyama</span>. All
-                    rights reserved.
-                </p>
-            </footer>
-        </div>
+        <footer>
+            <p>© <span id="current-year"></span> <span class="highlight">Davyduty_Mnyama</span>. All rights reserved.</p>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
